@@ -1,0 +1,23 @@
+name: Alcom build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: configure
+      run: ./configure
+    - name: make tests
+      run: make tests
+    - name: make build
+      run: make build
+    - uses: actions/upload-artifact@v3
+      with:
+         name: alcom
+         path: ./build/alcom

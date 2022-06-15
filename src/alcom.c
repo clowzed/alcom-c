@@ -1,15 +1,12 @@
 #include "../include/alcom.h"
 
 
-//? Returns index of comment splitter
 ssize_t comment_splitter_position(const char * line) {
     if (!line) 
         return -1;                                                                                                 
 
-
     bool    reading_inside_quotes = false;                                                                        
     ssize_t current_index         = 0;                                                                           
-
 
     while ((size_t)current_index < strlen(line)) {
         if (line[current_index] == '\n')                          return current_index;                            
@@ -18,7 +15,6 @@ ssize_t comment_splitter_position(const char * line) {
         if (line[current_index] == ';' && !reading_inside_quotes) return current_index;                     
         current_index++;                                                                                              
     }
-
 
     return current_index;                                                                                        
 }
@@ -196,6 +192,7 @@ void align_asm_file(char * filename) {
     rename(destination_filename, filename);                                                                           
 }
 
+#ifndef ALCOM__TEST 
 
 int main(int argc, char *argv[]) {
 
@@ -216,3 +213,5 @@ int main(int argc, char *argv[]) {
         }
     }
 }
+
+#endif
