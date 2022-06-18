@@ -94,10 +94,14 @@ size_t find_longest_line_without_comment(const char * filename) {
 
 bool line_is_empty(const char * line)
 {
+    if (!line)
+        return true;
+
     for (size_t ind = 0; ind < strlen(line); ind++)
     {
-        char current_char = line[ind];                                                                                
-        if (strchr(" \t\n", current_char) == NULL) return false;                                                      
+        char current_char = line[ind];
+        if (strchr(" \t\n", current_char) == NULL) 
+            return false;                                                      
     }
     return true;                                                                                                      
 }
