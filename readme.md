@@ -1,87 +1,50 @@
-<div style = "font-family: 'Courier New'">
-<h1>alcom (C lang)</h1>
+<div align = "center">
+<h1>Alcom</h1>
+<h4>Simple comments aligner for assembler</h4>
 </div>
 
+<br>
+<div align = "center">
 
-<div style = "font-family: 'Courier New'">
-<h1>what is it?</h1>
-<h4>This a simple comments aligner for assemblers</h4>
-</div>
+![p1](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![p2](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![p3](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 
-<div style = "font-family: 'Courier New'">
-<h1>demonstration</h1>
-<h5>Before aligning</h5>
-</div>
+[![Alcom build status](https://github.com/clowzed/alcom-c/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/clowzed/alcom-c/actions/workflows/c-cpp.yml)
 
-```
-.386
-DATA SEGMENT USE16
-MESG DB 'Hello ; word','$' ;     msg
-DATA ENDS ;;
-CODE SEGMENT USE16
-    ASSUME CS:CODE,DS:DATA ;;;
-BEG:
-    MOV AX,DATA
-    MOV DS,AX;
-    MOV AH,9
-    MOV DX, OFFSET MESG
-    INT 21H
-    MOV AH,4CH
-    INT 21H ;back to dos
-CODE ENDS
-END BEG
-```
-<div style = "font-family: 'Courier New'">
-<h5>After aligning</h5>
-</div>
-
-```
-.386
-DATA SEGMENT USE16
-MESG DB 'Hello word','$'                ;    msg
-DATA ENDS
-CODE SEGMENT USE16
-    ASSUME CS:CODE,DS:DATA
-BEG:
-    MOV AX,DATA
-    MOV DS,AX
-    MOV AH,9
-    MOV DX, OFFSET MESG
-    INT 21H
-    MOV AH,4CH
-    INT 21H                             ;    back to dos
-CODE ENDS
-END BEG
-
-```
-
-
-
-<div style = "font-family: 'Courier New'">
-<h1>requirements</h1>
-<ul>
-    <li><strong>gcc</strong> of any version</li>
-    <li> <strong>make</strong> for building</li>
-</ul>
 </div>
 
 
 
-<div style = "font-family: 'Courier New'">
-<h1>installation</h1>
+<div align = "center">
+<h1>Installation</h1>
 </div>
 
 ```bash
 git clone https://github.com/clowzed/alcom-c.git
 cd alcom-c
-make
+make build
 make install
 ```
 
-<div style = "font-family: 'Courier New'">
-<h1>usage</h1>
+<div align = "center">
+<h1>Usage</h1>
 </div>
 
 ```bash
 alcom file1.asm file2.asm file2.asm
 ```
+
+<div align = "center">
+<h1>Demonstration</h1>
+</div>
+
+
+### Before
+![before](./before.svg)
+
+### After
+![after](./after.svg)
+
+## TODO
+- [ ] Write tests for all functions
