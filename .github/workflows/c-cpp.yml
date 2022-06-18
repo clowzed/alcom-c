@@ -2,19 +2,17 @@ name: Alcom build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
-    - name: make tests
-      run: make tests
+    - name: make test
+      run: make test
     - name: make build
       run: make build
     - uses: actions/upload-artifact@v3
