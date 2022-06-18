@@ -1,6 +1,7 @@
 #ifndef ALCOM_HEADER_CLOWZED
 #define ALCOM_HEADER_CLOWZED
 
+#define  _GNU_SOURCE
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
