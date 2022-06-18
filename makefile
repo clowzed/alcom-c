@@ -1,5 +1,5 @@
 compiler    = gcc
-flags       = -Wall -Werror -pedantic -Weverything -std=c99 -O3
+flags       = -Wall -Werror -pedantic -std=c99 -O3
 sources     = ./src/alcom.c
 target_name = alcom
 
