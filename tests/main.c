@@ -51,7 +51,7 @@ bool test_line_is_empty(void)
         }
         else
         {
-            warning printf("expected : %zd got %zd\n", test_params.res, res);
+            warning printf("expected : %d got %d\n", test_params.res, res);
             error printf("test failed!\n");
         }
     }
