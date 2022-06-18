@@ -23,7 +23,6 @@
 ```bash
 git clone https://github.com/clowzed/alcom-c.git
 cd alcom-c
-make build
 make install
 ```
 
