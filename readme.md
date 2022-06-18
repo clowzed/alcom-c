@@ -12,6 +12,8 @@
 
 [![Alcom build status](https://github.com/clowzed/alcom-c/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/clowzed/alcom-c/actions/workflows/c-cpp.yml)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/clowzed/alcom-c/badge?s=91d2c83b40cbefbe9d894185d28ddb9d8f92a8a3)](https://www.codefactor.io/repository/github/clowzed/alcom-c)
+
 </div>
 
 
