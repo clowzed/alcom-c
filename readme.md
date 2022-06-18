@@ -2,12 +2,11 @@
 <h1>alcom (C lang)</h1>
 </div>
 
-<hr>
+
 <div style = "font-family: 'Courier New'">
 <h1>what is it?</h1>
 <h4>This a simple comments aligner for assemblers</h4>
 </div>
-<hr>
 
 <div style = "font-family: 'Courier New'">
 <h1>demonstration</h1>
@@ -56,7 +55,7 @@ END BEG
 
 ```
 
-<hr>
+
 
 <div style = "font-family: 'Courier New'">
 <h1>requirements</h1>
@@ -66,7 +65,7 @@ END BEG
 </ul>
 </div>
 
-<hr>
+
 
 <div style = "font-family: 'Courier New'">
 <h1>installation</h1>
@@ -79,7 +78,6 @@ make
 make install
 ```
 
-<hr>
 <div style = "font-family: 'Courier New'">
 <h1>usage</h1>
 </div>
